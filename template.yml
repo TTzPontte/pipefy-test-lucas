@@ -21,7 +21,7 @@ Globals:
     # More information in https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html
     PermissionsBoundary: !Sub 'arn:${AWS::Partition}:iam::${AWS::AccountId}:policy/${AppId}-${AWS::Region}-PermissionsBoundary'
     Layers:
-      - !Ref CommonLayer
+      - arn:aws:lambda:us-east-1:848638426587:layer:CommonTorreControleLayer:16651
 Parameters:
   AppId:
     Type: String
