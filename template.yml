@@ -89,9 +89,9 @@ Resources:
   putItemFunction:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: ./
+      CodeUri: src/handlers/CreateCard/
 #      Handler: src/handlers/put-item.putItemHandler
-      Handler: src/handlers/CreateCard/CreateCard.CrateCardHandler
+      Handler: CreateCard.CrateCardHandler
       Runtime: nodejs14.x
       MemorySize: 128
       Timeout: 60

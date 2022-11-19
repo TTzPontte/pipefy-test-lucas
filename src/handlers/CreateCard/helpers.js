@@ -1,8 +1,10 @@
-const {PipefyService} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/service");
-const {createTableRecord: createTableRecordMutations} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/mutations");
+const path = process.env.NODE_ENV === 'test' ? '../../../layers/common/' : '/opt/';
+const {PipefyService} = require(`${path}/pipefy/service`);
 
+const {listPipes, cards: {showCard}} = require(`${path}pipefy/queries`);
+const {createTableRecord: createTableRecordMutations} = require(`${path}pipefy/mutations`);
 
-const datePlusIndex = (startDate, index)=> {
+const datePlusIndex = (startDate, index) => {
     const date = new Date(startDate)
     date.setDate(date.getDay() + index)
     return date
@@ -10,7 +12,7 @@ const datePlusIndex = (startDate, index)=> {
 
 const createPayload = (data = {}, index) => {
     // todo add +1 to each date
-    const {start_date: startDate,end_date: endDate} = data;
+    const {start_date: startDate, end_date: endDate} = data;
     const NewEndDate = datePlusIndex(endDate, index)
     const newStartDate = datePlusIndex(startDate, index)
     return [

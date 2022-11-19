@@ -1,7 +1,12 @@
-const {Response} = require('../Utils/Response')
-const {createTableRecord, PipefyService} = require('../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/service')
-const {listPipes, cards: {showCard}} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/queries");
-const {createTableRecord: createTableRecordMutations} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/mutations");
+const path = process.env.NODE_ENV === 'test' ? '../../../layers/common/' : '/opt/';
+
+const { PipefyService} = require(`${path}Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/service`);
+const {cards: {showCard}} = require(`${path}Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/queries`);
+const {createTableRecord: createTableRecordMutations} = require(`${path}Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/mutations`);
+const  Response =(status=200, data)=>( {
+    statusCode: status,
+    body: JSON.stringify(data),
+});
 const createTableRecords = async ({pipefy}) => {
     const records = [];
 
@@ -19,7 +24,7 @@ const createTableRecords = async ({pipefy}) => {
     return records
 }
 
-const TABLE_ID = '01011001'
+
 const API_KEY = '01011001'
 const CrateCardHandler = async (event) => {
     const {body: {data: {body}}} = event;
