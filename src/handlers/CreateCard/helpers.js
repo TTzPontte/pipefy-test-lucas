@@ -1,5 +1,5 @@
-const {PipefyService} = require("./service");
-const {createTableRecord: createTableRecordMutations} = require("./mutations");
+const {PipefyService} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/service");
+const {createTableRecord: createTableRecordMutations} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/mutations");
 
 
 const datePlusIndex = (startDate, index)=> {

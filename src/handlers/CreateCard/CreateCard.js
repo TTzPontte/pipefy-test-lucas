@@ -1,7 +1,7 @@
 const {Response} = require('../Utils/Response')
-const {createTableRecord, PipefyService} = require('../pipefy/service')
-const {listPipes, cards: {showCard}} = require("../pipefy/queries");
-const {createTableRecord: createTableRecordMutations} = require("../pipefy/mutations");
+const {createTableRecord, PipefyService} = require('../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/service')
+const {listPipes, cards: {showCard}} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/queries");
+const {createTableRecord: createTableRecordMutations} = require("../../../../../../../Library/Application Support/JetBrains/WebStorm2022.2/scratches/pipefy/mutations");
 const createTableRecords = async ({pipefy}) => {
     const records = [];
 
