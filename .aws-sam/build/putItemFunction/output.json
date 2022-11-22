@@ -1,0 +1,80 @@
+{
+  "data": {
+    "card": {
+      "id": "603183157",
+      "title": "Stock Operator",
+      "fields": [
+        {
+          "indexName": "field_10_string",
+          "name": "start_wroking_hours",
+          "value": "9"
+        },
+        {
+          "indexName": "field_9_string",
+          "name": "end_wroking_hours",
+          "value": "5"
+        },
+        {
+          "indexName": "field_1_datetime",
+          "name": "Start Date",
+          "value": "11/21/2022 03:00 AM"
+        },
+        {
+          "indexName": "field_2_datetime",
+          "name": "End Date",
+          "value": "11/25/2022 03:00 AM"
+        },
+        {
+          "indexName": "field_2_connector",
+          "name": "Employer",
+          "value": "[\"Pace\"]"
+        },
+        {
+          "indexName": "field_7_string",
+          "name": "Title",
+          "value": "Stock Operator"
+        },
+        {
+          "indexName": "field_8_string",
+          "name": "Job Description ",
+          "value": "sa Stock operator must be responsible for unpacking"
+        },
+        {
+          "indexName": "field_5_number",
+          "name": "Amount of Employees",
+          "value": "2"
+        },
+        {
+          "indexName": "field_4_number",
+          "name": "Base Invoice Rate",
+          "value": "18.00"
+        },
+        {
+          "indexName": "field_6_number",
+          "name": "Base Hourly Rate",
+          "value": "16.50"
+        },
+        {
+          "indexName": "field_7_connector",
+          "name": "Shifts",
+          "value": "[\"603183547\"]"
+        },
+        {
+          "indexName": "field_8_connector",
+          "name": "iterations",
+          "value": "[\"1\", \"2\"]"
+        },
+        {
+          "indexName": "field_9_connector",
+          "name": "Pros",
+          "value": "[]"
+        },
+        {
+          "indexName": "field_6_connector",
+          "name": "Shifts",
+          "value": "[\"1\", \"2\"]"
+        }
+      ]
+    }
+  }
+}

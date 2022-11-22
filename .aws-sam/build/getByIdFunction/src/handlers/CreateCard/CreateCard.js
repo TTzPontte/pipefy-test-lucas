@@ -1,6 +1,6 @@
 const {cards: { showCard }} = require("./Utils/queries");
-const { PipefyService } = require("./Utils/service");
-const { createTableRecords, Response } = require("./helpers");
+const { PipefyService, Response } = require("./Utils/service");
+const { createTableRecords } = require("./helpers");
 
 const {
   env: {
@@ -20,16 +20,12 @@ const CrateCardHandler = async (event) => {
   console.log({ cardId });
 
   const pipefy = new PipefyService(API_KEY);
-  const {card} = await pipefy.gqlRequest({
+  const cardData = await pipefy.gqlRequest({
     document: showCard,
     variables: { cardId }
   });
 
-  console.log({card:card})
-  const records = await createTableRecords(card, pipefy);
+  const records = createTableRecords(cardData);
   return Response(200, { data: records });
 };
-// module.exports = {CrateCardHandler};
-const x = CrateCardHandler({
-  "body": "{\"data\":{\"action\":\"card.create\",\"card\":{\"id\":603183157,\"pipe_id\":\"c8W9JoXW\"}}}"
-})
+module.exports = {CrateCardHandler};
